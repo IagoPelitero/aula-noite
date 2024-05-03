@@ -1,0 +1,55 @@
+.firstContainer {
+  width: 300px;
+  height: 415px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.profileContainer {
+  background-color: #fff;
+  width: 100%;
+  height: 330px;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: var(--boxShadowSections);
+}
+
+.backcontainer {
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  border: 4px solid #ed2590;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.backcontainer>img {
+  width: 100%;
+  height: 95%;
+}
+
+.buttonEdit {
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 15px;
+  background-color: #fff;
+  color: var(--pinkMain);
+  font-family: SF-SemiBold;
+  box-shadow: var(--boxShadowSections);
+}
+
+.buttonEdit:hover {
+  transition: .3s ease-in-out;
+  transform: translateX(0) scale(1.1);
+}

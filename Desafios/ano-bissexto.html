@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Ano Bissexto</h1>
+    </header>
+<button type="button" id="verificar">Verificar</button>
+
+<div id="returUser">
+    <h1 id="h1"></h1>
+</div>
+
+<script>
+
+    function anoBissexto(){
+
+       const ano = prompt("Qual ano você gostaria de verificar?");
+
+       let resposta;
+
+       if (ano % 4 == 0 && ano % 100 != 0){
+        resposta = `O ano ${ano} é bissexto.` 
+       } else {
+        resposta = `O ano ${ano} NÃO é bissexto` 
+       }       
+
+       const titulo = document.getElementById('h1')
+       titulo.innerText = resposta
+    }
+
+    document.getElementById('verificar').addEventListener('click', anoBissexto)
+
+</script>
+</body>
+</html>

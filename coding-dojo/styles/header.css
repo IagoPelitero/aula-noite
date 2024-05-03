@@ -1,0 +1,143 @@
+header {
+  height: 70px;
+  background-color: var(--headerColor);
+  margin-bottom: 70px;
+  box-shadow: var(--boxShadowSections);
+}
+
+.headerContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerProfile {
+  height: 60%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerProfile > h3 {
+  font-size: 17px;
+  font-family: SF-Regular;
+  color: var(--mainTextColor);
+  margin: 0;
+}
+
+.CaretDown {
+  width: 20px;
+  height: 20px;
+}
+
+.CaretDown:hover {
+  cursor: pointer;
+}
+
+.leftHeader {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rightHeader {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+
+nav > ul {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul > li > a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--mainTextColor);
+  font-family: SF-Regular;
+  color: var(--mainTextColor);
+}
+
+.rightHeader .inputDiv {
+  width: 60%;
+  height: 60%;
+  background-color: var(--secondaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.055);
+}
+
+.rightHeader .inputDiv > input {
+  background-color: var(--secondaryColor);
+  width: 90%;
+  border: none;
+  outline: none;
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
+  border-radius: 4px;
+  font-family: SF-Regular;
+  color: #000;
+}
+
+.inputDiv > input::placeholder {
+  font-family: SF-Regular;
+  color: var(--secondaryTextColor);
+}
+
+.lupa {
+  width: 25px;
+  height: 100%;
+  margin-left: 12px;
+}
+
+.lupa:hover {
+  cursor: pointer;
+}
+
+.perfilLink {
+  color: var(--pinkMain);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  width: 0;
+  background-color: transparent;
+  transition: width 0.4s ease;
+}
+
+a:hover::after {
+  background-color: var(--pinkMain);
+  width: 100%;
+}
+
+a:hover {
+  transition: 0.3s ease-in-out;
+  transform: translateX(2px) scale(1.1);
+}

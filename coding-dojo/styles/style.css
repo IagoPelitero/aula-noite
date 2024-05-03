@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+
+@font-face {
+  font-family: SF-Regular;
+  src: url(../assets/fonts/sf-pro-display-font/SF-Pro-Display-Regular.ttf);
+}
+
+@font-face {
+  font-family: SF-SemiBold;
+  src: url(../assets/fonts/sf-pro-display-font/SF-Pro-Display-Semibold.ttf);
+}
+
+@font-face {
+  font-family: SF-Medium;
+  src: url(../assets/fonts/sf-pro-display-font/SF-Pro-Display-Medium.ttf);
+}
+
+:root {
+  --pinkMain: #ed2590;
+  --bodyColor: #d9e6f7;
+  --headerColor: #fdfeff;
+  --secondaryColor: #eff3f8;
+  --mainTextColor: #4b4b4b;
+  --secondaryTextColor: #b4aeae;
+  --boxShadowSections: 1px 1px 15px rgba(0, 0, 0, 0.082);
+}
+
+.container-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.body {
+  background-color: #d9e6f7;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+

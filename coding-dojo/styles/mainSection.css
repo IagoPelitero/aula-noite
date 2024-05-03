@@ -1,0 +1,147 @@
+.mainContainer {
+  width: 500px;
+  background-color: #fff;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: var(--boxShadowSections);
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.topContainer>h1 {
+    margin: 0;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.balloonContainer {
+  height: 100%;
+  width: 100%;
+  background-color: #eff3f8;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  color: #4b4b4b;
+  padding: 10px;
+  position: relative;
+  align-items: center;
+  justify-content: start;
+}
+
+.balloonContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 8%;
+  margin-left: -10px;
+  border-width: 11px;
+  border-style: solid;
+  border-color: transparent transparent #eff3f8 transparent;
+}
+
+.balloonContainer > h3 {
+  font-size: 15px;
+  font-family: SF-Regular;
+  color: var(--mainTextColor);
+  margin: 0;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.192);
+}
+
+.icons {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.iconsDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconsDiv > h3 {
+  font-size: 17px;
+  color: var(--mainTextColor);
+  font-family: SF-Regular;
+}
+
+#star {
+    display: flex;
+    gap: 3px;
+}
+
+.iconsImages {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.iconsImages > h3 {
+  font-size: 17px;
+  text-align: center;
+  color: var(--mainTextColor);
+  opacity: 50%;
+  margin: 0;
+}
+
+.infoContainer > h3 {
+  font-size: 16px;
+  font-family: SF-Regular;
+  color: var(--secondaryTextColor);
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+
+.infoContainer > h3 > span {
+  color: var(--mainTextColor);
+}
+
+.tags {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  height: 30px;
+}
+
+.tags > div {
+  display: inline-block;
+  height: 100%;
+  border: 1px solid var(--pinkMain);
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  align-content: center;
+}
+
+.tags > div > span {
+  font-size: 16px;
+  font-family: SF-Regular;
+  color: var(--mainTextColor);
+}
+
+#tagHover:hover {
+  transition: .3s ease-in-out;
+  transform: translateX(0) scale(1.1);
+  cursor: pointer;
+}
+
+.seeAll {
+    width: 65px;
+    font-family: SF-Medium;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--pinkMain);
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cadastrado = [];
+
+       function showMenu() {
+        return parseInt(prompt(
+            `
+            *******Menu*******
+            [1] -> Cadastrar usuário
+            [2] -> Visualizar cadastro
+            [3] -> Atualizar cadastro
+            [4] -> Deletar cadastro
+            [5] -> Sair
+            `
+        ));
+        }
+
+        function cadastro(){
+            const dataAtual = new Date(); // Captura a data e hora atual
+            const dataHoraFormatada = dataAtual.toLocaleString('pt-BR'); // Formata data e hora para o padrão brasileiro
+
+            const nome = prompt('Digite o nome que será cadastrado: ');
+            const numero = prompt('Digite o número que será cadastrado: ');
+            const email = prompt('Digite o e-mail que será cadastrado: ');
+            const dataAtual = new date();
+            const dataHoraReal = dataAtual.toLocaleString('pt-BR')
+
+            if (!nome || !numero || !email) {
+                alert("Para cadastro, todos os dados são obrigatórios");
+
+                return;
+            }
+
+<<<<<<< HEAD
+            alert('Cadastrado com sucesso ${dataHoraReal}')
+=======
+            alert(`Cadastrado com sucesso em ${dataHoraFormatada}`); // Exibe data e hora no alerta
+>>>>>>> fde0008b80878e152de423fddf84fffbc7fddc1e
+
+            cadastrado.push({nome, numero, email});
+            console.log(cadastrado);
+        }
+
+        function listaUsuario(){
+            let listUsuario = "";
+
+            cadastrado.forEach((dataUsuario) => {
+<<<<<<< HEAD
+                listUsuario += `\nNome: ${dataUsuario.nome}, E-mail: ${dataUsuario.email}, Número: ${dataUsuario.numero}, Data do cadastro: ${dataHoraReal}\n` 
+=======
+                listUsuario += `\nNome: ${dataUsuario.nome}, E-mail: ${dataUsuario.email}, Número: ${dataUsuario.numero}, Data de cadastro: ${dataHoraFormatada}\n` 
+>>>>>>> fde0008b80878e152de423fddf84fffbc7fddc1e
+            })
+            alert("Lista de usuários cadastrados" + listUsuario);
+        }
+
+        function atualizacaoCadastro(){
+            const atualizacao = prompt('Informe o e-mail para atualizar o cadastro: ');
+
+            const usuarioEncontrado = cadastrado.find(user => 
+            user.email === atualizacao
+        );
+
+        alert(`O cadastro selecionado foi ${atualizacao}`)
+
+            if (!usuarioEncontrado){
+                alert('Usuário não encontrado');
+                return;
+            }
+
+            const novoNome = prompt('Digite o novo nome: ');
+            const novoEmail = prompt('Digite o novo e-mail: ');
+            const novoNumero = prompt('Digite o novo número: ');
+
+            if (novoNome){
+                usuarioEncontrado.nome = novoNome;
+            }
+
+            if (novoEmail){
+                usuarioEncontrado.email = novoEmail;
+            }
+
+            if (novoNumero){
+                usuarioEncontrado.numero = novoNumero;
+            }
+
+            alert('Dados atualizados com sucesso!')
+        }
+
+            function deletarUsuario(){
+
+            const emailDelete = prompt('Informe o e-mail de cadatastro que será deletado: ');
+
+            const emailDeleteFind = cadastrado.findIndex(email => email.email === emailDelete);
+
+            const confimação = confirm('Você deseja remover o usuário' + emailDelete + '?');
+
+            if (confimação){
+                cadastrado.splice(emailDeleteFind, -1);
+                window.alert('Deletado com sucesso')
+            } else {
+                alert('Mantido!')
+            }}
+
+            let loopBreak = true
+
+                while (loopBreak) {
+                    switch (showMenu()) {
+                        case 1:
+                        cadastro();
+                        break;
+        case 2:
+            listaUsuario();
+            break;
+        case 3:
+            atualizacaoCadastro();
+            break;
+        case 4:
+            deletarUsuario();
+            break;
+        case 5:
+            alert("Saindo do programa... Até mais!")
+            loopBreak = false
+            break;
+
+        default:
+            alert("Opção inválida");
+            break;
+    }
+
+        }
+    </script>
+</body>
+</html>

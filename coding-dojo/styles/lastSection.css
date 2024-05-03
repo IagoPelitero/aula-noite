@@ -1,0 +1,72 @@
+.lastContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+}
+
+.personContainer {
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 25px;
+  background-color: #fff;
+  box-shadow: var(--boxShadowSections);
+}
+
+.firstDivPerson {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.firstDivPerson > h3 {
+  font-size: 18px;
+  color: var(--mainTextColor);
+  margin: 0;
+}
+
+.secondDivPerson {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.imagesDiv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+/* .imagesDiv > img {
+  /* margin-bottom: 8px;
+} */
+
+.imagesDiv > h4 {
+  font-size: 16px;
+  font-family: SF-Regular;
+  margin-bottom: 0;
+}
+
+.imagesDiv:hover {
+  transition: .3s;
+  transform: translateX(0) scale(1.1);
+  color: var(--pinkMain);
+  cursor: pointer;
+}
+
+.imagesDiv > img:hover {
+  border: 2px solid var(--pinkMain);
+  border-radius: 50%;
+}
+
+#images2:hover {
+  border: 2px solid var(--pinkMain);
+  border-radius: 18px;
+}

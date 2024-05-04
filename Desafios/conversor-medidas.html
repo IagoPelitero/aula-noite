@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Coversor de medidas</h1>
+    </header>
+    <button type="button" id="convertido">Converter</button>
+
+    <div>
+        <h3>Clique no botão acima para conversão</h3>
+        <h1 id="conversao"></h1>
+    </div>
+    <script>
+        function conversorMedidas() {
+            const medida = prompt("Informe a distância (em m):");
+
+            let resposta = document.getElementById('conversao');
+
+            resposta.innerText = `A distância de ${medida} metros, corresponde a ...\n ${medida / 1000}km\n ${medida / 100}hm \n ${medida / 10} dam\n ${medida * 10}dm \n ${medida * 100}cm \n ${medida * 1000}mm `
+
+        }
+
+        document.getElementById('convertido').addEventListener('click', conversorMedidas);
+    </script>
+</body>
+
+</html>

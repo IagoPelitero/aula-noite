@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Conversor R$ -> US$</h1>
+    </header>
+    <button type="button" id="btConverter">Converter</button>
+    <div>
+        <p>Clique no botão acima para iniciar</p>
+        <h2 id="conversao"></h2>
+    </div>
+
+    <script>
+        document.getElementById('btConverter').addEventListener('click', () => {
+            const valor = prompt('Quantos R$ você tem na carteira?')
+
+            const convertido = document.getElementById('conversao');
+
+            convertido.innerHTML = `O valor R$${valor} convertido é o US$${(valor / 5.07).toFixed(2)} dólares. `
+        })
+    </script>
+</body>
+
+</html>

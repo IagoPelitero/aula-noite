@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Conversor de temperaturas</h1>
+    </header>
+    <button type="button" id="btConversao">Converter</button>
+    <div>
+        <p>Clique acima para obter o resultado</p>
+        <p id="impressao"></p>
+    </div>
+    <script>
+        document.getElementById('btConversao').addEventListener('click', ()=>{
+            const valor = prompt('Digite a temperatura em ºC (Celsius):')
+
+            const resposta = document.getElementById('impressao');
+
+            resposta.innerHTML = `
+            <h1>A temperatura de ${valor}ºC corresponde a ...</h1> 
+            <p>${valor + 273.15}K (Kelvin)</p> 
+            <p>${(valor * 9/5) + 32}ºF (Fahrenheit)</p>`
+        })
+    </script>
+</body>
+</html>

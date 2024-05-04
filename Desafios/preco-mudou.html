@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Preço Mudou</h1>
+    </header>
+    <button type="button" id="btVerificar" onclick="comparacao()">Verificar</button>
+    <div id="reposta">
+        <p>Clique no botão acima</p>
+    </div>
+    <script>
+        function comparacao(){
+            const 
+            valorAnterior = prompt('Qual era o preço anterior do produto?'),
+            valorAtual = prompt('Qual é o preço atual do produto?');
+
+            let resposta;
+
+            if (valorAnterior < valorAtual && valorAnterior != valorAtual){
+                resposta = `<h1>Analisando os valores informados...</h1>
+                <p>O produto custava R$${valorAnterior} e agora custa ${valorAtual}</p>
+                <p>Hoje o produto está mais caro</p> 
+                <p>O preço subiu R$${(valorAtual - valorAnterior).toFixed(2)} em relação ao preço anterior</p> 
+                <p>Uma variação de ${(valorAnterior / valorAtual)*100}% pra cima</p>` 
+            } else if (valorAnterior > valorAtual && valorAnterior != valorAtual){
+                resposta = `<h1>Analisando os valores informados...</h1>
+                <p>O produto custava R$${valorAnterior} e agora custa ${valorAtual}</p>
+                <p>Hoje o produto está mais barato</p> 
+                <p>O preço caiu R$${(valorAnterior - valorAtual).toFixed(2)} em relação ao preço anterior</p> 
+                <p>Uma variação de ${(valorAtual / valorAnterior)*100}% pra baixo</p>`
+            } else {
+                resposta = 'O valor não sofreu alteração';
+            }
+
+            const user = document.getElementById('reposta');
+            user.innerHTML = JSON.parse(reposta);
+        }
+    </script>
+</body>
+</html>

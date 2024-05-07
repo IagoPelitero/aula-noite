@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Calculando o troco</h1>
+    </header>
+    <button type="button" onclick="troco()">Comprar produto</button>
+
+    <script>
+        function troco(){
+            const nome = prompt('Qual produto você está comprando?');
+            const valor = parseFloat(prompt(`Quanto custa o ${nome} que você está comprando?`).replace(',', '.')).toFixed(2);
+            const pago = parseFloat(prompt(`Qual foi o valor que você deu para pagar o ${nome}?`).replace(',', '.')).toFixed(2);
+
+            let resposta;
+
+            if (valor === pago){
+                resposta = alert(`Você comprou ${nome} que custou R$${valor}. \n Deu R$${pago} em dinheiro, não gerando troco. \n Volte sempre.`)
+            } if (valor < pago) {
+                resposta = alert(`Você comprou ${nome} que custou R$${valor}. \n Deu R$${pago} em dinheiro e vai receber R$${(pago - valor).toFixed(2)}. \n Volte sempre.`)
+            } else {
+                resposta = alert(`Você comprou ${nome} que custou R$${valor}. \n Deu R$${pago} em dinheiro e está faltando completar R$${(valor - pago).toFixed(2)}. \n Realize o pagamento do restante.`)
+            }
+        }
+    </script>
+</body>
+</html>

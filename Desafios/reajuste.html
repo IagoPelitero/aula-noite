@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Reajuste Salarial</h1>
+        <button type="button" id="reajustado">Reajustar Salário</button>
+    </header>
+    <div id="resposta">
+        <p>Clique no botão acima para verificar</p>
+    </div>
+
+    <script>
+        function reajuste() {
+            const nome = prompt('Qual nome do funcionário?');
+            let valor = parseFloat(prompt(`Qual é o salário de ${nome}?`).replace(',', '.')).toFixed(2);
+            const porcentagem = parseFloat(prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem (%)?`).replace(',', '.'));
+
+            let resposta;
+
+            if (!isNaN(porcentagem) && porcentagem !== 0) {
+                let resultado = (porcentagem * valor) / 100;
+                let atual = resultado + parseFloat(valor);
+
+                resposta = `<h1>${nome} recebeu um aumento salárial!</h1>
+                <p>O salário atual era R$${valor}</p>
+                <p>Com um aumento de ${porcentagem}%, salário vai aumentar R$${resultado} no próximo mês.</p>
+                <p>E a partir daí, ${nome} vai passar a ganhar R$${atual.toFixed(2)} </p>`
+            } else {
+                resposta = `<h1>Não houve alteração salárial<h1>`
+            }
+
+            const retorno = document.getElementById('resposta');
+            retorno.innerHTML = resposta;
+        }
+
+        document.getElementById('reajustado').addEventListener('click', reajuste);
+    </script>
+</body>
+
+</html>

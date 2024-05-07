@@ -26,19 +26,21 @@
                 <p>O produto custava R$${valorAnterior} e agora custa ${valorAtual}</p>
                 <p>Hoje o produto está mais caro</p> 
                 <p>O preço subiu R$${(valorAtual - valorAnterior).toFixed(2)} em relação ao preço anterior</p> 
-                <p>Uma variação de ${(valorAnterior / valorAtual)*100}% pra cima</p>` 
+                <p>Uma variação de ${([(valorAtual / valorAnterior)-1]*100).toFixed(1)}% pra cima</p>` 
             } else if (valorAnterior > valorAtual && valorAnterior != valorAtual){
                 resposta = `<h1>Analisando os valores informados...</h1>
                 <p>O produto custava R$${valorAnterior} e agora custa ${valorAtual}</p>
                 <p>Hoje o produto está mais barato</p> 
                 <p>O preço caiu R$${(valorAnterior - valorAtual).toFixed(2)} em relação ao preço anterior</p> 
-                <p>Uma variação de ${(valorAtual / valorAnterior)*100}% pra baixo</p>`
+                <p>Uma variação de ${([(valorAnterior / valorAtual)-1]*100).toFixed(1)}% pra baixo</p>`
             } else {
                 resposta = 'O valor não sofreu alteração';
             }
 
             const user = document.getElementById('reposta');
-            user.innerHTML = JSON.parse(reposta);
+            user.innerHTML = resposta;
+
+            console.log(resposta);
         }
     </script>
 </body>

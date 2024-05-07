@@ -11,6 +11,11 @@
     <header>
         <h1>Conversor R$ -> US$</h1>
     </header>
+    <ul>
+        <li><a href="ano-bissexto.html">Ano bissexto</a></li>
+        <li><a href="conversor-medidas.html">Conversor de medidas</a></li>
+        <li><a href="conversor-temperatura.html">Conversor de temperatura</a></li>
+    </ul>
     <button type="button" id="btConverter">Converter</button>
     <div>
         <p>Clique no botão acima para iniciar</p>
@@ -23,7 +28,12 @@
 
             const convertido = document.getElementById('conversao');
 
+            if (!isNaN(valor)){
             convertido.innerHTML = `O valor R$${valor} convertido é o US$${(valor / 5.07).toFixed(2)} dólares. `
+        } else {
+            convertido.innerHTML = 'O valor inserido ou não é conversão de real para dólar ou não é um dado válido para seguir com a conversão. Verifique o dado e registre novamente'
+        }
+        window.reload()
         })
     </script>
 </body>

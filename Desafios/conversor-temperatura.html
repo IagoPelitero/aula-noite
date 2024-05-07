@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <h1>Conversor de temperaturas</h1>
     </header>
     <button type="button" id="btConversao">Converter</button>
-    <div>
+    <div id="user">
         <p>Clique acima para obter o resultado</p>
-        <p id="impressao"></p>
+        <p></p>
     </div>
     <script>
-        document.getElementById('btConversao').addEventListener('click', ()=>{
-            const valor = prompt('Digite a temperatura em ºC (Celsius):')
 
-            const resposta = document.getElementById('impressao');
+        document.getElementById('btConversao').addEventListener('click', () => {
+            const valor = prompt('Digite a temperatura em ºC (Celsius):');
+            let resposta;
 
-            resposta.innerHTML = `
-            <h1>A temperatura de ${valor}ºC corresponde a ...</h1> 
-            <p>${valor + 273.15}K (Kelvin)</p> 
-            <p>${(valor * 9/5) + 32}ºF (Fahrenheit)</p>`
-        })
+            if (!isNaN(valor)) {
+                resposta = `
+                <h1>A temperatura de ${valor}ºC corresponde a ...</h1> 
+                <p>${valor + 273.15}K (Kelvin)</p> 
+                <p>${(valor * 9 / 5) + 32}ºF (Fahrenheit)</p>`
+            } else {
+                resposta = 'O valor informado não foi cadastrado no momento ou não é um dado válido para conversão.'
+            }
+
+            const user = document.getElementById('user');
+
+            user.innerHTML = resposta;
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+            }
+        });
+
+
     </script>
 </body>
+
 </html>

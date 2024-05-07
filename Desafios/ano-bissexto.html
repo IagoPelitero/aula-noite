@@ -9,6 +9,9 @@
     <header>
         <h1>Ano Bissexto</h1>
     </header>
+    <ul>
+        <li><a href="conversor-medidas.html">Conversor de medidas</a></li>
+    </ul>
 <button type="button" id="verificar">Verificar</button>
 
 <div>
@@ -23,10 +26,13 @@
 
        let resposta;
 
+       if (!isNaN(ano)){
        if (ano % 4 == 0 && ano % 100 != 0){
         resposta = `O ano ${ano} é bissexto.` 
        } else {
         resposta = `O ano ${ano} NÃO é bissexto` 
+       }} else {
+        resposta = `O dado digitado não é válido para verificar se o ano é bissexto`
        }       
 
        const titulo = document.getElementById('h1')

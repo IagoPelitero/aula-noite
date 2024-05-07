@@ -11,6 +11,11 @@
     <header>
         <h1>Coversor de medidas</h1>
     </header>
+    <ul>
+        <li><a href="ano-bissexto.html">Ano bissexto</a>       
+        </li>
+        <li><a href="conversor-monetario.html">Conversor de medidas</a></li>
+    </ul>
     <button type="button" id="convertido">Converter</button>
 
     <div>
@@ -23,8 +28,11 @@
 
             let resposta = document.getElementById('conversao');
 
+            if (!isNaN(medida)){
             resposta.innerText = `A distância de ${medida} metros, corresponde a ...\n ${medida / 1000}km\n ${medida / 100}hm \n ${medida / 10} dam\n ${medida * 10}dm \n ${medida * 100}cm \n ${medida * 1000}mm `
-
+            } else {
+                resposta.innerText = 'O dado inserido não pode ser usado para converter metros(m) para outras distâncias.'
+            }
         }
 
         document.getElementById('convertido').addEventListener('click', conversorMedidas);

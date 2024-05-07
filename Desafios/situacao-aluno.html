@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Situação do aluno</h1>
+    </header>
+    <button type="button" id="notas" onclick="resultadoNotas()">Entre com as notas</button>
+    <div id="resposta">
+        <p>Clique no botão acima para verificar</p>
+    </div>
+
+    <script>
+        function resultadoNotas(){
+            const nome = prompt('Qual nome do(a) aluno(a)?');
+            const nota1 = Number(prompt(`Primeira nota de ${nome}`));
+            const nota2 = Number(prompt(`Segunda nota de ${nome}`));
+            const resultado = (nota1 + nota2) / 2;
+            let media;
+            
+            if (resultado < 3){
+                media = `<h1>Analisando a situação de ${nome}</h1>
+                <p>Com as notas ${nota1} e ${nota2} a média ${resultado.toFixed(1)}</p>
+                <p>Com média abaixo de 3.0, o aluno está REPROVADO</p>`
+            } else if (resultado < 6){
+                media = `<h1>Analisando a situação de ${nome}</h1>
+                <p>Com as notas ${nota1} e ${nota2} a média ${resultado.toFixed(1)}</p>
+                <p>Com média entre 3.0 e 6.0, o aluno está em RECUPERAÇÃO</p>`
+            } else {
+                media = `<h1>Analisando a situação de ${nome}</h1>
+                <p>Com as notas ${nota1} e ${nota2} a média ${resultado.toFixed(1)}</p>
+                <p>Com média acima de 6.0, o aluno está APROVADO</p>`
+            }
+            
+            
+            const notaFinal = document.getElementById('resposta');
+            notaFinal.innerHTML = media;
+        }
+    </script>
+</body>
+</html>

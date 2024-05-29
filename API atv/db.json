@@ -1,0 +1,25 @@
+{
+  "series": [
+    {
+      "id": "1",
+      "nome": "One Piece",
+      "temporadas": "21 temporadas",
+      "ano de lançamento": "1999",
+      "studio": "WIT Studio"
+    },
+    {
+      "id": "2",
+      "nome": "Stranger Things",
+      "temporadas": "4 temporadas",
+      "ano de lançamento": "2016",
+      "studio": "Netflix"
+    },
+    {
+      "id": "3",
+      "nome": "La casa de papel",
+      "temporadas": "5 temporadas",
+      "ano de lançamento": "2017",
+      "estudio": "Netflix"
+    }
+  ]
+}

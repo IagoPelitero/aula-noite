@@ -6,6 +6,41 @@
       "numTemporadas": "21 temporadas",
       "anoLancamento": "1999",
       "studio": "WIT Studio"
+    },
+    {
+      "id": null,
+      "nomeSerie": "Stranger things",
+      "numTemporada": "7",
+      "anoLancamento": "2017",
+      "studio": "Netlfix"
+    },
+    {
+      "id": null,
+      "nomeSerie": "Stranger things",
+      "numTemporada": "7",
+      "anoLancamento": "2017",
+      "studio": "Netlfix"
+    },
+    {
+      "id": null,
+      "nomeSerie": "Dragon ball",
+      "numTemporada": "7",
+      "anoLancamento": "1990",
+      "studio": "Toei"
+    },
+    {
+      "id": null,
+      "nomeSerie": "Dragon ball",
+      "numTemporada": "7",
+      "anoLancamento": "1990",
+      "studio": "Toei"
+    },
+    {
+      "id": null,
+      "nomeSerie": "",
+      "numTemporada": "",
+      "anoLancamento": "",
+      "studio": ""
     }
   ]
 }

@@ -13,7 +13,21 @@ document.getElementById('btnCadastrar').addEventListener('click', async(e)=> {
         "anoLancamento": document.getElementById('anoLancamento').value,
         "studio": document.getElementById('produtora').value
     }
-
     const dadosFinais = JSON.stringify(dadosEnviadosApi)
-    console.log(dadosFinais)
+
+    await fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: dadosFinais
+    })
+    // const requisicao = new request(url, {
+    //     method: 'POST',
+    //     Headers:{
+    //         'Content-Type': 'application/json'
+    //     },
+    //     body: dadosFinais
+    // })
+    // fetch(requisicao)
 })

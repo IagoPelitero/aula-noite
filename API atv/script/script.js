@@ -51,7 +51,6 @@ async function getSeries() {
                     'Content-Type': 'application/json',
                 }
             })
-            alert(idDelete);
         })
             
         

@@ -1,13 +1,6 @@
 {
   "series": [
     {
-      "id": "1",
-      "nomeSerie": "One Piece",
-      "numTemporadas": "21 temporadas",
-      "anoLancamento": "1999",
-      "studio": "WIT Studio"
-    },
-    {
       "id": null,
       "nomeSerie": "Stranger things",
       "numTemporada": "7",
@@ -37,6 +30,69 @@
     },
     {
       "id": null,
+      "nomeSerie": "",
+      "numTemporada": "",
+      "anoLancamento": "",
+      "studio": ""
+    },
+    {
+      "id": null,
+      "nomeSerie": "HunterxHunter",
+      "numTemporada": "7",
+      "anoLancamento": "2011",
+      "studio": "Toei"
+    },
+    {
+      "id": null,
+      "nomeSerie": "HunterxHunter",
+      "numTemporada": "7",
+      "anoLancamento": "2011",
+      "studio": "Toei"
+    },
+    {
+      "id": null,
+      "nomeSerie": "HunterxHunter",
+      "numTemporada": "7",
+      "anoLancamento": "2011",
+      "studio": "toei"
+    },
+    {
+      "id": null,
+      "nomeSerie": "",
+      "numTemporada": "",
+      "anoLancamento": "",
+      "studio": ""
+    },
+    {
+      "id": null,
+      "nomeSerie": "",
+      "numTemporada": "",
+      "anoLancamento": "",
+      "studio": ""
+    },
+    {
+      "id": null,
+      "nomeSerie": "",
+      "numTemporada": "",
+      "anoLancamento": "",
+      "studio": ""
+    },
+    {
+      "id": null,
+      "nomeSerie": "",
+      "numTemporada": "",
+      "anoLancamento": "",
+      "studio": ""
+    },
+    {
+      "id": null,
+      "nomeSerie": "",
+      "numTemporada": "",
+      "anoLancamento": "",
+      "studio": ""
+    },
+    {
+      "id": "b369",
       "nomeSerie": "",
       "numTemporada": "",
       "anoLancamento": "",

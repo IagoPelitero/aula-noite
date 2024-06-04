@@ -35,9 +35,23 @@ async function getSeries() {
         const tdEdit = document.createElement('img');
         tdEdit.src = './assets/icons/pencil.svg'
 
-        tdEdit.addEventListener('click', ()=>{
+        tdEdit.addEventListener('click', ()=>{ const idNew= series.id;
+const newName= document.getElementById('').vale;
+const newNumTemp= document.getElementById('').vale;
+const newAnoLanc= document.getElementById('').vale;
+const newStudio= document.getElementById('').vale;
 
-        })
+fetch(`http://localhost:8082/series/${idNew}`,{
+                method: "PUT",
+body: JSON.stringify({
+newName,
+newNumTem,
+newAnoLanc,
+newStudio
+
+        }),headers: {
+                    'Content-Type': 'application/json'}})});
+
 
         const tdDelete = document.createElement('img')
         tdDelete.src = './assets/icons/trash.svg'
